@@ -33,21 +33,11 @@ public class WaypointMovement : MonoBehaviour
         if (transform.position == _target.position) 
         {
             _count++;
-            
-            Flip();
-
+                       
             if (_count >= _points.Length) 
             {
                 _count = 0;
             }
-        }
-    }
-
-    private void Flip() 
-    {
-        if (TryGetComponent(out Enemy enemy)) 
-        {
-            enemy.transform.Rotate(0, 180, 0);
         }
     }
 }

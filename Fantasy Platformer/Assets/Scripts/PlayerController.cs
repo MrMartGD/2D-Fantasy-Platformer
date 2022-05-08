@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.TryGetComponent(out MovingPlatform platform))
+        if (collision.gameObject.TryGetComponent(out PlatformMover platform))
         {
             this.transform.parent = collision.transform;
         }
@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.TryGetComponent(out MovingPlatform platform))
+        if (collision.gameObject.TryGetComponent(out PlatformMover platform))
         {
             this.transform.parent = null;
         }
